@@ -15,7 +15,11 @@ SubProceso divid<-div(a,b)
 FinSubProceso
 
 Algoritmo procesos
+	Definir operacion Como Entero
 	Definir opcio Como Entero
+	Escribir "¿Deseas hacer una operacion? (Escribir 1(Sip) o 2(Nop)"
+	Leer operacion
+	Mientras operacion = 1 Hacer
 	Escribir "Escoge el valor de A"
 	Leer a
 	Escribir "Escoge el valor de B"
@@ -39,5 +43,7 @@ Algoritmo procesos
 				FinSi
 			FinSi
 		FinSi
-		
+		Escribir "¿Deseas hacer una operacion? (Escribir 1(Sip) o 2(Nop)"
+		Leer operacion
+	Fin Mientras
 FinAlgoritmo
