@@ -1,35 +1,43 @@
-algoritmo minicalculadora
-Definir num_a, num_b, num_res como Real
-Definir opcion como Entero
+SubProceso sumar<-suma(a,b)  
+	sumar<-a + b;
+FinSubProceso
 
-Escribir "Introducir numero a"
-leer num_a
-Escribir "Introducir numero b"
-leer num_b
-Escribir "Introducir 1(suma), 2(resta), 3(multiplicar), 4(dividir)"
-leer opcion
+SubProceso restar<-resta(a,b)  
+	restar<-a - b;
+FinSubProceso
 
-si (opcion =1) entonces
-	num_res = num_a + num_b
-	Escribir "La suma de ", num_a," y de ", num_b," es de ",num_res
-sino
-	si (opcion = 2) entonces
-		num_res = num_a - num_b
-		Escribir "La resta de ", num_a," y de ", num_b," es de ",num_res
-	sino
-		si (opcion = 3) Entonces
-			num_res = num_a * num_b
-			Escribir "La multiplicacion de ", num_a," y de ", num_b," es de ",num_res
-		SiNo
-			Escribir "Esa operación no esta permitida"
-			si (opcion = 4) Entonces
-				num_res = num_a / num_b
-				Escribir "La division de ", num_a," y de ", num_b," es de ",num_res
+SubProceso multi<-mul(a,b)  
+	multi<-a * b;
+FinSubProceso
+
+SubProceso divid<-div(a,b)  
+	divid<-a / b;
+FinSubProceso
+
+Algoritmo procesos
+	Definir opcio Como Entero
+	Escribir "Escoge el valor de A"
+	Leer a
+	Escribir "Escoge el valor de B"
+	Leer b
+	Escribir "Escoge tu opcion: 1(suma), 2(resta), 3(multiplicar), 4(dividir)"
+	Leer opcio
+	Si opcio = 1 Entonces
+		Escribir "Resultado de sumar a y b es: " suma(a,b)
+	SiNo
+			Si opcio = 2 Entonces
+				Escribir "Resultado de restar a y b es: " resta(a,b)
 			SiNo
-				Escribir "Esa operación no esta permitida"
+				Si opcio = 3 Entonces
+					Escribir "Resultado de multiplicar a y b es: " mul(a,b)
+				SiNo
+					Si opcio = 4 Entonces
+						Escribir "Resultado de dividir a y b es: " div(a,b)
+					SiNo
+						Escribir "No existe esa opcion"
+						finsi
+				FinSi
 			FinSi
-			
 		FinSi
-	finsi
-finsi
+		
 FinAlgoritmo
